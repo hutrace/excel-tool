@@ -14,7 +14,6 @@ import org.apache.poi.ss.usermodel.Row;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月14日
  */
 public class MapResolver extends AbstractReaderResolver<Map<String, Object>> {
 

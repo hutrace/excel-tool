@@ -19,10 +19,10 @@ import org.hutrace.exceltool.utils.TypeUtils;
  *  	获取Excel的第一行作为标题
  *  	可在JavaBean中字段上添加{@link ExcelField}注解，使用title值匹配Excel的标题
  *  	JavaBean只会解析一次，后面每次都按照标题行的长度、顺序执行（也就是说要保证内容行的列数不能超过标题行的列数，超出的列是读不到的。）
+ *  </pre>
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月15日
  * @param <T>
  */
 public class JavaBeanResolver<T> extends AbstractReaderResolver<Object> {

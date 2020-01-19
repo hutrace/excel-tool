@@ -20,7 +20,6 @@ import org.hutrace.exceltool.pojo.TitleAlias;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月15日
  * @see AbstractWriterResolver
  * @see WriterResolver
  */

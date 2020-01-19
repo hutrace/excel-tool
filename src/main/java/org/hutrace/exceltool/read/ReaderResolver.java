@@ -11,7 +11,6 @@ import org.apache.poi.ss.usermodel.Row;
  * @since 1.8
  * @version 1.0
  * @param <T>
- * @time 2020年1月14日
  */
 public interface ReaderResolver {
 	

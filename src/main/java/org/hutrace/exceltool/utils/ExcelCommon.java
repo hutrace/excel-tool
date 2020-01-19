@@ -14,7 +14,6 @@ import org.hutrace.exceltool.pojo.ExcelType;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月14日
  */
 public class ExcelCommon {
 	
@@ -59,10 +58,8 @@ public class ExcelCommon {
 	/**
 	 * <p>创建{@link Workbook}对象，此方法用于写入时调用
 	 * <p>当type为null时会抛出{@link NullPointerException}异常
-	 * @param in 输入流
 	 * @param type Excel文件类型
 	 * @return {@link Workbook}
-	 * @throws IOException
 	 */
 	public Workbook createWorkbook(ExcelType type) {
 		if(type == null) {

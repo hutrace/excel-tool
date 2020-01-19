@@ -79,7 +79,7 @@ public class Reader extends ExcelCommon {
 	/**
 	 * <p>读取Excel数据
 	 * <p>Excel的第一行数据为标题（注意：标题必须是字符串）
-	 * <p>Excel的标题作为Map的键，可通过设置{@link #titleAlias}来实现在Map中的key值。
+	 * <p>Excel的标题作为Map的键，可通过设置{@link TitleAlias}来实现在Map中的key值。
 	 * <p>Map的长度(size)也将会使用标题的个数来确定
 	 * @param realPath 根据realPath的后缀判断Excel的类型，如果没有后缀或后缀错误，将会抛出空指针异常。
 	 * @return MapList

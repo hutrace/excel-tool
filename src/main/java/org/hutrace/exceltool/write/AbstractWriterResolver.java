@@ -13,7 +13,6 @@ import org.hutrace.exceltool.utils.TypeUtils;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月15日
  * @param <T>
  */
 public abstract class AbstractWriterResolver<T> implements WriterResolver {
