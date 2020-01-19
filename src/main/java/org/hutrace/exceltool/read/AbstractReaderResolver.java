@@ -14,7 +14,6 @@ import org.hutrace.exceltool.exception.ExcelReaderException;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月14日
  * @param <T>
  * @see ReaderResolver
  */

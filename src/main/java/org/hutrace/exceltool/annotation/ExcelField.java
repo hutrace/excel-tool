@@ -12,7 +12,6 @@ import java.lang.annotation.Target;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月14日
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)

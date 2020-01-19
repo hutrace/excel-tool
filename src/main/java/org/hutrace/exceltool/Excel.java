@@ -19,7 +19,6 @@ import org.hutrace.exceltool.write.Writer;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月14日
  */
 public class Excel {
 	
@@ -45,7 +44,7 @@ public class Excel {
 	 * <p>获取{@link Reader}对象
 	 * <p>并设置sheetName
 	 * @return {@link Reader}对象
-	 * @see {@link Reader#setSheetName(String)}
+	 * @see Reader#setSheetName(String)
 	 */
 	public static Reader reader(String sheetName) {
 		Reader reader = new Reader();
@@ -67,7 +66,7 @@ public class Excel {
 	 * <p>获取{@link Writer}对象
 	 * <p>并设置sheetName
 	 * @return {@link Writer}对象
-	 * @see {@link Writer#setSheetName(String)}
+	 * @see Writer#setSheetName(String)}=
 	 */
 	public static Writer writer(String sheetName) {
 		Writer writer = new Writer();
@@ -85,7 +84,7 @@ public class Excel {
 	 * @param realPath 根据realPath的后缀判断Excel的类型，如果没有后缀或后缀错误，将会抛出空指针异常。
 	 * @return MapList
 	 * @throws IOException
-	 * @see {@link Reader#toMap(String)}
+	 * @see Reader#toMap(String)
 	 */
 	public static List<Map<String, Object>> readToMap(String realPath) throws IOException {
 		return reader().toMap(realPath);
@@ -100,7 +99,7 @@ public class Excel {
 	 * @param type Excel文件的类型，如果为空，将会抛出空指针异常。
 	 * @return MapList
 	 * @throws IOException
-	 * @see {@link Reader#toMap(InputStream, ExcelType)}
+	 * @see Reader#toMap(InputStream, ExcelType)
 	 */
 	public static List<Map<String, Object>> readToMap(InputStream in, ExcelType type) throws IOException {
 		return reader().toMap(in, type);
@@ -114,7 +113,7 @@ public class Excel {
 	 * @param realPath 根据realPath的后缀判断Excel的类型，如果没有后缀或后缀错误，将会抛出空指针异常。
 	 * @return MapList
 	 * @throws IOException
-	 * @see {@link Reader#toMap(String, TitleAlias[])}
+	 * @see Reader#toMap(String, TitleAlias[])
 	 */
 	public static List<Map<String, Object>> readToMap(String realPath, TitleAlias[] titleAlias) throws IOException {
 		return reader().toMap(realPath, titleAlias);
@@ -130,7 +129,7 @@ public class Excel {
 	 * @param titleAlias Excel标题与Java字段(属性名)对应类数组
 	 * @return MapList
 	 * @throws IOException
-	 * @see {@link Reader#toMap(InputStream, ExcelType, TitleAlias[])}
+	 * @see Reader#toMap(InputStream, ExcelType, TitleAlias[])
 	 */
 	public static List<Map<String, Object>> readToMap(InputStream in, ExcelType type, TitleAlias[] titleAlias) throws IOException {
 		return reader().toMap(in, type, titleAlias);
@@ -145,7 +144,7 @@ public class Excel {
 	 * @param clazs 需要存放数据的JavaBean对象
 	 * @return JavaBeanList
 	 * @throws IOException
-	 * @see {@link Reader#toJavaBean(String, Class)}
+	 * @see Reader#toJavaBean(String, Class)
 	 */
 	public static <T> List<T> readToJavaBean(String realPath, Class<T> clazs) throws IOException {
 		return reader().toJavaBean(realPath, clazs);
@@ -161,7 +160,7 @@ public class Excel {
 	 * @param clazs 需要存放数据的JavaBean对象
 	 * @return JavaBeanList
 	 * @throws IOException
-	 * @see {@link Reader#toJavaBean(InputStream, ExcelType, Class)}
+	 * @see Reader#toJavaBean(InputStream, ExcelType, Class)
 	 */
 	public static <T> List<T> readToJavaBean(InputStream in, ExcelType type, Class<T> clazs) throws IOException {
 		return reader().toJavaBean(in, type, clazs);
@@ -176,7 +175,7 @@ public class Excel {
 	 * @param sheetName 读取Excel的sheet名称，默认读取Excel的第一个sheet，如果你的Excel有多个sheet，并且你想读取你需要的sheet时，你可以指定它。
 	 * @return MapList
 	 * @throws IOException
-	 * @see {@link Reader#toMap(String)}
+	 * @see Reader#toMap(String)
 	 */
 	public static List<Map<String, Object>> readToMap(String realPath, String sheetName) throws IOException {
 		return reader(sheetName).toMap(realPath);
@@ -192,7 +191,7 @@ public class Excel {
 	 * @param sheetName 读取Excel的sheet名称，默认读取Excel的第一个sheet，如果你的Excel有多个sheet，并且你想读取你需要的sheet时，你可以指定它。
 	 * @return MapList
 	 * @throws IOException
-	 * @see {@link Reader#toMap(InputStream, ExcelType)}
+	 * @see Reader#toMap(InputStream, ExcelType)
 	 */
 	public static List<Map<String, Object>> readToMap(InputStream in, ExcelType type, String sheetName) throws IOException {
 		return reader(sheetName).toMap(in, type);
@@ -207,7 +206,7 @@ public class Excel {
 	 * @param sheetName 读取Excel的sheet名称，默认读取Excel的第一个sheet，如果你的Excel有多个sheet，并且你想读取你需要的sheet时，你可以指定它。
 	 * @return MapList
 	 * @throws IOException
-	 * @see {@link Reader#toMap(String, TitleAlias[])}
+	 * @see Reader#toMap(String, TitleAlias[])
 	 */
 	public static List<Map<String, Object>> readToMap(String realPath, TitleAlias[] titleAlias, String sheetName) throws IOException {
 		return reader(sheetName).toMap(realPath, titleAlias);
@@ -224,7 +223,7 @@ public class Excel {
 	 * @param sheetName 读取Excel的sheet名称，默认读取Excel的第一个sheet，如果你的Excel有多个sheet，并且你想读取你需要的sheet时，你可以指定它。
 	 * @return MapList
 	 * @throws IOException
-	 * @see {@link Reader#toMap(InputStream, ExcelType, TitleAlias[])}
+	 * @see Reader#toMap(InputStream, ExcelType, TitleAlias[])
 	 */
 	public static List<Map<String, Object>> readToMap(InputStream in, ExcelType type, TitleAlias[] titleAlias, String sheetName) throws IOException {
 		return reader(sheetName).toMap(in, type, titleAlias);
@@ -240,7 +239,7 @@ public class Excel {
 	 * @param sheetName 读取Excel的sheet名称，默认读取Excel的第一个sheet，如果你的Excel有多个sheet，并且你想读取你需要的sheet时，你可以指定它。
 	 * @return JavaBeanList
 	 * @throws IOException
-	 * @see {@link Reader#toJavaBean(String, Class)}
+	 * @see Reader#toJavaBean(String, Class)
 	 */
 	public static <T> List<T> readToJavaBean(String realPath, Class<T> clazs, String sheetName) throws IOException {
 		return reader(sheetName).toJavaBean(realPath, clazs);
@@ -257,7 +256,7 @@ public class Excel {
 	 * @param sheetName 读取Excel的sheet名称，默认读取Excel的第一个sheet，如果你的Excel有多个sheet，并且你想读取你需要的sheet时，你可以指定它。
 	 * @return JavaBeanList
 	 * @throws IOException
-	 * @see {@link Reader#toJavaBean(InputStream, ExcelType, Class)}
+	 * @see Reader#toJavaBean(InputStream, ExcelType, Class)
 	 */
 	public static <T> List<T> readToJavaBean(InputStream in, ExcelType type, Class<T> clazs, String sheetName) throws IOException {
 		return reader(sheetName).toJavaBean(in, type, clazs);
@@ -271,7 +270,7 @@ public class Excel {
 	 * @param list 写入Excel的数据
 	 * @param realPath 写入文件的绝对路径
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String)}
+	 * @see Writer#mapToFile(List, String)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath) throws IOException {
 		writer().mapToFile(list, realPath);
@@ -286,7 +285,7 @@ public class Excel {
 	 * @param realPath 写入文件的绝对路径
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, String[])}
+	 * @see Writer#mapToFile(List, String, String[])
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, String[] collation) throws IOException {
 		writer().mapToFile(list, realPath, collation);
@@ -303,7 +302,7 @@ public class Excel {
 	 * @param realPath 写入文件的绝对路径
 	 * @param titleAlias 标题别名数组，通过它可以设置写入Excel的标题
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, TitleAlias[])}
+	 * @see Writer#mapToFile(List, String, TitleAlias[])
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, TitleAlias[] titleAlias) throws IOException {
 		writer().mapToFile(list, realPath, titleAlias);
@@ -321,7 +320,7 @@ public class Excel {
 	 * @param titleAlias 标题别名数组，通过它可以设置写入Excel的标题
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, TitleAlias[], String[])}
+	 * @see Writer#mapToFile(List, String, TitleAlias[], String[])
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, TitleAlias[] titleAlias, String[] collation) throws IOException {
 		writer().mapToFile(list, realPath, titleAlias, collation);
@@ -335,7 +334,7 @@ public class Excel {
 	 * @param list 写入Excel的数据
 	 * @param realPath 写入文件的绝对路径
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToFile(List, String)}
+	 * @see Writer#javaBeanToFile(List, String)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToFile(List<T> list, String realPath) throws IOException {
@@ -352,7 +351,7 @@ public class Excel {
 	 * @param realPath 写入文件的绝对路径
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToFile(List, String)}
+	 * @see Writer#javaBeanToFile(List, String)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToFile(List<T> list, String realPath, String[] collation) throws IOException {
@@ -368,7 +367,7 @@ public class Excel {
 	 * @param realPath 写入文件的绝对路径
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, ExcelType)}
+	 * @see Writer#mapToFile(List, String, ExcelType)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, ExcelType type) throws IOException {
 		writer().mapToFile(list, realPath, type);
@@ -384,7 +383,7 @@ public class Excel {
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, String[], ExcelType)}
+	 * @see Writer#mapToFile(List, String, String[], ExcelType)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, String[] collation, ExcelType type) throws IOException {
 		writer().mapToFile(list, realPath, collation, type);
@@ -402,7 +401,7 @@ public class Excel {
 	 * @param titleAlias 标题别名数组，通过它可以设置写入Excel的标题
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, TitleAlias[], ExcelType)}
+	 * @see Writer#mapToFile(List, String, TitleAlias[], ExcelType)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, TitleAlias[] titleAlias, ExcelType type) throws IOException {
 		writer().mapToFile(list, realPath, titleAlias, type);
@@ -421,7 +420,7 @@ public class Excel {
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, TitleAlias[], String[], ExcelType)}
+	 * @see Writer#mapToFile(List, String, TitleAlias[], String[], ExcelType)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, TitleAlias[] titleAlias,
 			String[] collation, ExcelType type) throws IOException {
@@ -437,7 +436,7 @@ public class Excel {
 	 * @param realPath 写入文件的绝对路径
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToFile(List, String, ExcelType)}
+	 * @see Writer#javaBeanToFile(List, String, ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToFile(List<T> list, String realPath, ExcelType type) throws IOException {
@@ -455,7 +454,7 @@ public class Excel {
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToFile(List, String, String[], ExcelType)}
+	 * @see Writer#javaBeanToFile(List, String, String[], ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToFile(List<T> list, String realPath, String[] collation, ExcelType type) throws IOException {
@@ -471,7 +470,7 @@ public class Excel {
 	 * @param out 输出流，向输出流中写入Excel数据
 	 * @param type 它可以对Excel指定格式
 	 * @throws IOException
-	 * @see {@link Writer#mapToOutputStream(List, OutputStream, ExcelType)}
+	 * @see Writer#mapToOutputStream(List, OutputStream, ExcelType)
 	 */
 	public static void writeMapToOutputStream(List<Map<String, Object>> list, OutputStream out, ExcelType type) throws IOException {
 		writer().mapToOutputStream(list, out, type);
@@ -487,7 +486,7 @@ public class Excel {
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @param type 它可以对Excel指定格式
 	 * @throws IOException
-	 * @see {@link Writer#mapToOutputStream(List, OutputStream, String[], ExcelType)}
+	 * @see Writer#mapToOutputStream(List, OutputStream, String[], ExcelType)
 	 */
 	public static void writeMapToOutputStream(List<Map<String, Object>> list, OutputStream out, String[] collation, ExcelType type) throws IOException {
 		writer().mapToOutputStream(list, out, collation, type);
@@ -505,7 +504,7 @@ public class Excel {
 	 * @param titleAlias 标题别名数组，通过它可以设置写入Excel的标题
 	 * @param type 它可以对Excel指定格式
 	 * @throws IOException
-	 * @see {@link Writer#mapToOutputStream(List, OutputStream, TitleAlias[], ExcelType)}
+	 * @see Writer#mapToOutputStream(List, OutputStream, TitleAlias[], ExcelType)
 	 */
 	public static void writeMapToOutputStream(List<Map<String, Object>> list, OutputStream out, TitleAlias[] titleAlias, ExcelType type) throws IOException {
 		writer().mapToOutputStream(list, out, titleAlias, type);
@@ -524,7 +523,7 @@ public class Excel {
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @param type 它可以对Excel指定格式
 	 * @throws IOException
-	 * @see {@link Writer#mapToOutputStream(List, OutputStream, TitleAlias[], String[], ExcelType)}
+	 * @see Writer#mapToOutputStream(List, OutputStream, TitleAlias[], String[], ExcelType)
 	 */
 	public static void writeMapToOutputStream(List<Map<String, Object>> list, OutputStream out, TitleAlias[] titleAlias,
 			String[] collation, ExcelType type) throws IOException {
@@ -540,7 +539,7 @@ public class Excel {
 	 * @param out 输出流，向输出流中写入Excel数据
 	 * @param type 它可以对Excel指定格式
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToOutputStream(List, OutputStream, ExcelType)}
+	 * @see Writer#javaBeanToOutputStream(List, OutputStream, ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToOutputStream(List<T> list, OutputStream out, ExcelType type) throws IOException {
@@ -558,7 +557,7 @@ public class Excel {
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @param type 它可以对Excel指定格式
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToOutputStream(List, OutputStream, String[], ExcelType)}
+	 * @see Writer#javaBeanToOutputStream(List, OutputStream, String[], ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToOutputStream(List<T> list, OutputStream out, String[] collation, ExcelType type) throws IOException {
@@ -574,7 +573,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#mapToBytes(List, ExcelType)}
+	 * @see Writer#mapToBytes(List, ExcelType)
 	 */
 	public static byte[] writeMapToBytes(List<Map<String, Object>> list, ExcelType type) throws IOException {
 		return writer().mapToBytes(list, type);
@@ -590,7 +589,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#mapToBytes(List, String[], ExcelType)}
+	 * @see Writer#mapToBytes(List, String[], ExcelType)
 	 */
 	public static byte[] writeMapToBytes(List<Map<String, Object>> list, String[] collation, ExcelType type) throws IOException {
 		return writer().mapToBytes(list, collation, type);
@@ -608,7 +607,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#mapToBytes(List, TitleAlias[], ExcelType)}
+	 * @see Writer#mapToBytes(List, TitleAlias[], ExcelType)
 	 */
 	public static byte[] writeMapToBytes(List<Map<String, Object>> list, TitleAlias[] titleAlias, ExcelType type) throws IOException {
 		return writer().mapToBytes(list, titleAlias, type);
@@ -627,7 +626,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#mapToBytes(List, TitleAlias[], String[], ExcelType)}
+	 * @see Writer#mapToBytes(List, TitleAlias[], String[], ExcelType)
 	 */
 	public static byte[] writeMapToBytes(List<Map<String, Object>> list, TitleAlias[] titleAlias, String[] collation, ExcelType type) throws IOException {
 		return writer().mapToBytes(list, titleAlias, collation, type);
@@ -642,7 +641,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToBytes(List, ExcelType)}
+	 * @see Writer#javaBeanToBytes(List, ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> byte[] writeJavaBeanToBytes(List<T> list, ExcelType type) throws IOException {
@@ -660,7 +659,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToBytes(List, String[], ExcelType)}
+	 * @see Writer#javaBeanToBytes(List, String[], ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> byte[] writeJavaBeanToBytes(List<T> list, String[] collation, ExcelType type) throws IOException {
@@ -676,7 +675,7 @@ public class Excel {
 	 * @param realPath 写入文件的绝对路径
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String)}
+	 * @see Writer#mapToFile(List, String)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, String sheetName) throws IOException {
 		writer(sheetName).mapToFile(list, realPath);
@@ -692,7 +691,7 @@ public class Excel {
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, String[])}
+	 * @see Writer#mapToFile(List, String, String[])
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, String[] collation, String sheetName) throws IOException {
 		writer(sheetName).mapToFile(list, realPath, collation);
@@ -710,7 +709,7 @@ public class Excel {
 	 * @param titleAlias 标题别名数组，通过它可以设置写入Excel的标题
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, TitleAlias[])}
+	 * @see Writer#mapToFile(List, String, TitleAlias[])
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, TitleAlias[] titleAlias, String sheetName) throws IOException {
 		writer(sheetName).mapToFile(list, realPath, titleAlias);
@@ -729,7 +728,7 @@ public class Excel {
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, TitleAlias[], String[])}
+	 * @see Writer#mapToFile(List, String, TitleAlias[], String[])
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, TitleAlias[] titleAlias,
 			String[] collation, String sheetName) throws IOException {
@@ -745,7 +744,7 @@ public class Excel {
 	 * @param realPath 写入文件的绝对路径
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToFile(List, String)}
+	 * @see Writer#javaBeanToFile(List, String)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToFile(List<T> list, String realPath, String sheetName) throws IOException {
@@ -763,7 +762,7 @@ public class Excel {
 	 * @param collation 排序规则，对列进行排序，可以指定map中的key写入Excel的顺序，也可以过滤不需要的属性
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToFile(List, String)}
+	 * @see Writer#javaBeanToFile(List, String)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToFile(List<T> list, String realPath, String[] collation, String sheetName) throws IOException {
@@ -780,7 +779,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, ExcelType)}
+	 * @see Writer#mapToFile(List, String, ExcelType)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, ExcelType type, String sheetName) throws IOException {
 		writer(sheetName).mapToFile(list, realPath, type);
@@ -797,7 +796,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, String[], ExcelType)}
+	 * @see Writer#mapToFile(List, String, String[], ExcelType)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, String[] collation,
 			ExcelType type, String sheetName) throws IOException {
@@ -817,7 +816,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, TitleAlias[], ExcelType)}
+	 * @see Writer#mapToFile(List, String, TitleAlias[], ExcelType)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, TitleAlias[] titleAlias,
 			ExcelType type, String sheetName) throws IOException {
@@ -838,7 +837,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToFile(List, String, TitleAlias[], String[], ExcelType)}
+	 * @see Writer#mapToFile(List, String, TitleAlias[], String[], ExcelType)
 	 */
 	public static void writeMapToFile(List<Map<String, Object>> list, String realPath, TitleAlias[] titleAlias,
 			String[] collation, ExcelType type, String sheetName) throws IOException {
@@ -855,7 +854,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToFile(List, String, ExcelType)}
+	 * @see Writer#javaBeanToFile(List, String, ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToFile(List<T> list, String realPath, ExcelType type, String sheetName) throws IOException {
@@ -874,7 +873,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式，而不需要通过realPath参数的后缀去解析。
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToFile(List, String, String[], ExcelType)}
+	 * @see Writer#javaBeanToFile(List, String, String[], ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToFile(List<T> list, String realPath, String[] collation,
@@ -892,7 +891,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToOutputStream(List, OutputStream, ExcelType)}
+	 * @see Writer#mapToOutputStream(List, OutputStream, ExcelType)
 	 */
 	public static void writeMapToOutputStream(List<Map<String, Object>> list, OutputStream out, ExcelType type, String sheetName) throws IOException {
 		writer(sheetName).mapToOutputStream(list, out, type);
@@ -909,7 +908,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToOutputStream(List, OutputStream, String[], ExcelType)}
+	 * @see Writer#mapToOutputStream(List, OutputStream, String[], ExcelType)
 	 */
 	public static void writeMapToOutputStream(List<Map<String, Object>> list, OutputStream out,
 			String[] collation, ExcelType type, String sheetName) throws IOException {
@@ -929,7 +928,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToOutputStream(List, OutputStream, TitleAlias[], ExcelType)}
+	 * @see Writer#mapToOutputStream(List, OutputStream, TitleAlias[], ExcelType)
 	 */
 	public static void writeMapToOutputStream(List<Map<String, Object>> list, OutputStream out,
 			TitleAlias[] titleAlias, ExcelType type, String sheetName) throws IOException {
@@ -950,7 +949,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#mapToOutputStream(List, OutputStream, TitleAlias[], String[], ExcelType)}
+	 * @see Writer#mapToOutputStream(List, OutputStream, TitleAlias[], String[], ExcelType)
 	 */
 	public static void writeMapToOutputStream(List<Map<String, Object>> list, OutputStream out, TitleAlias[] titleAlias,
 			String[] collation, ExcelType type, String sheetName) throws IOException {
@@ -967,7 +966,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToOutputStream(List, OutputStream, ExcelType)}
+	 * @see Writer#javaBeanToOutputStream(List, OutputStream, ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToOutputStream(List<T> list, OutputStream out, ExcelType type, String sheetName) throws IOException {
@@ -986,7 +985,7 @@ public class Excel {
 	 * @param type 它可以对Excel指定格式
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToOutputStream(List, OutputStream, String[], ExcelType)}
+	 * @see Writer#javaBeanToOutputStream(List, OutputStream, String[], ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void writeJavaBeanToOutputStream(List<T> list, OutputStream out, String[] collation,
@@ -1004,7 +1003,7 @@ public class Excel {
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#mapToBytes(List, ExcelType)}
+	 * @see Writer#mapToBytes(List, ExcelType)
 	 */
 	public static byte[] writeMapToBytes(List<Map<String, Object>> list, ExcelType type, String sheetName) throws IOException {
 		return writer(sheetName).mapToBytes(list, type);
@@ -1021,7 +1020,7 @@ public class Excel {
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#mapToBytes(List, String[], ExcelType)}
+	 * @see Writer#mapToBytes(List, String[], ExcelType)
 	 */
 	public static byte[] writeMapToBytes(List<Map<String, Object>> list, String[] collation,
 			ExcelType type, String sheetName) throws IOException {
@@ -1041,7 +1040,7 @@ public class Excel {
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#mapToBytes(List, TitleAlias[], ExcelType)}
+	 * @see Writer#mapToBytes(List, TitleAlias[], ExcelType)
 	 */
 	public static byte[] writeMapToBytes(List<Map<String, Object>> list, TitleAlias[] titleAlias,
 			ExcelType type, String sheetName) throws IOException {
@@ -1062,7 +1061,7 @@ public class Excel {
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#mapToBytes(List, TitleAlias[], String[], ExcelType)}
+	 * @see Writer#mapToBytes(List, TitleAlias[], String[], ExcelType)
 	 */
 	public static byte[] writeMapToBytes(List<Map<String, Object>> list, TitleAlias[] titleAlias, String[] collation,
 			ExcelType type, String sheetName) throws IOException {
@@ -1079,7 +1078,7 @@ public class Excel {
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToBytes(List, ExcelType)}
+	 * @see Writer#javaBeanToBytes(List, ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> byte[] writeJavaBeanToBytes(List<T> list, ExcelType type, String sheetName) throws IOException {
@@ -1098,7 +1097,7 @@ public class Excel {
 	 * @param sheetName 设置Excel文件的sheet名称
 	 * @return 字节数组
 	 * @throws IOException
-	 * @see {@link Writer#javaBeanToBytes(List, String[], ExcelType)}
+	 * @see Writer#javaBeanToBytes(List, String[], ExcelType)
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> byte[] writeJavaBeanToBytes(List<T> list, String[] collation, ExcelType type, String sheetName) throws IOException {

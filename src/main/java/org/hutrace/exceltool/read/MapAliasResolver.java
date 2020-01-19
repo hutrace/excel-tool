@@ -16,7 +16,6 @@ import org.hutrace.exceltool.pojo.TitleAlias;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月14日
  */
 public class MapAliasResolver extends AbstractReaderResolver<Map<String, Object>> {
 	

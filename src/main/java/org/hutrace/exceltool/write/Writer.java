@@ -24,7 +24,6 @@ import org.hutrace.exceltool.utils.ExcelCommon;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月15日
  */
 public class Writer extends ExcelCommon {
 	
@@ -562,7 +561,6 @@ public class Writer extends ExcelCommon {
 	/**
 	 * <p>向Excel写入数据
 	 * <p>创建{@link Workbook}与{@link Sheet}后，调用{@link #writing(Sheet, int, WriterResolver)}
-	 * @param out 输出流
 	 * @param size 数据的长度，这里可以理解为Excel需要创建的多少行（除去标题行）
 	 * @param type Excel的类型，它决定了{@link Workbook}、{@link Sheet}、{@link Row}、{@link Cell}等Excel相关的实现类
 	 * @param resolver 写入数据解析器

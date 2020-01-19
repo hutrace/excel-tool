@@ -20,7 +20,6 @@ import org.hutrace.exceltool.exception.ExcelWriteException;
  * @author HuTrace
  * @since 1.8
  * @version 1.0
- * @time 2020年1月15日
  * @see AbstractWriterResolver
  * @see WriterResolver
  */
@@ -37,7 +36,7 @@ public class JavaBeanResolver extends AbstractWriterResolver<Object> {
 	 * <p>JavaBean可以使用{@link ExcelField}注解设置Excel的标题，如果不设置，则采用JavaBean的字段名称
 	 * <p>该解析器是按照JavaBean的字段顺序进行解析，生成Excel列的顺序会按照JavaBean中字段的顺序而定
 	 * <p>当然，你可以使用{@link JavaBeanCollationResolver}解析器，它可以自定义顺序
-	 * @param 写入Excel的数据
+	 * @param data 写入Excel的数据
 	 * @see AbstractWriterResolver
 	 * @see WriterResolver
 	 */
